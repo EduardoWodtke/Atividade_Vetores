@@ -7,10 +7,18 @@
 
     //ENTRADA
 
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+
+    const rm = prompt("(Tiggo, Sportage, Tucson EcoSport). Qual carro deseja REMOVER da lista?")
 
     //PROCESSAMENTO
 
+    const carroRm = carrosSUV.indexOf(rm)
+
+    carrosSUV.splice(carroRm, 1);
 
     //SAÍDA
+
+    document.write(`${carrosSUV}`);
 
 </script>

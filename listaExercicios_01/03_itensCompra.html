@@ -9,10 +9,26 @@
 
     //ENTRADA
 
+    const f1 = prompt("diga uma fruta");
+    const f2 = prompt("diga uma fruta");
+    const f3 = prompt("diga uma fruta");
+    const b1 = prompt("diga uma bebida");
+    const b2 = prompt("diga uma bebida");
+    const b3 = prompt("diga uma bebida");
+    let fruta;
+    let bebida;
+    let resultado;
 
     //PROCESSAMENTO
 
+    fruta = [f1, f2, f3];
+    bebida = [b1, b2, b3];
+    resultado = fruta.concat(bebida);
 
     //SAÍDA
+
+    document.write(`${fruta}</br>`); 
+    document.write(`${bebida}</br>`); 
+    document.write(`${resultado}</br>`);
 
 </script>

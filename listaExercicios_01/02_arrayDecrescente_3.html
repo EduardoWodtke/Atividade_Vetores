@@ -5,10 +5,33 @@
 
     //ENTRADA
 
+    const n1 = parseInt(prompt("numero 1"))
+    const n2 = parseInt(prompt("numero 2"))
+    const n3 = parseInt(prompt("numero 3"))
+    let resultado;
 
     //PROCESSAMENTO
 
+    resultado = [n1, n2, n1];
+
+    if(n1 > n2 && n1 > n3 && n2 > n3){
+        resultado = [n1, n2, n3];
+    }else if (n1 >n2 && n1 > n3 && n3 > n2){
+        resultado = [n1, n3, n2];
+    }else if (n2 > n1 && n2 > n3 && n1 > n3){
+        resultado = [n2, n1, n3];
+    }else if (n2 > n1 && n2 > n3 && n3 > n1){
+        resultado = [n2, n3, n1];
+    }else if(n3 > n1 && n3 > n2 && n2 > n1){
+        resultado = [n3, n2, n1];
+    } else if(n3 > n1 && n3 > n2 && n1 > n2){
+        resultado = [n3, n1, n2];
+    }else {
+        resultado = "deu ruim!"
+    }
 
     //SAÍDA
+
+    document.write(resultado.join(" - "));
 
 </script>
