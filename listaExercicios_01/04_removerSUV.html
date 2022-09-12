@@ -14,11 +14,11 @@
     //PROCESSAMENTO
 
     const carroRm = carrosSUV.indexOf(rm)
-
+    const listaAntiga = carrosSUV.join(", ");
     carrosSUV.splice(carroRm, 1);
 
     //SAÍDA
 
-    document.write(`${carrosSUV}`);
+    document.write(`Lista nova:${carrosSUV.join(", ")}. Lista antiga:${listaAntiga}`);
 
 </script>
