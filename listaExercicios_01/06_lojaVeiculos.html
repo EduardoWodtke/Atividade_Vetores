@@ -10,11 +10,34 @@
     //Apresente a lista final de cada tipo de veículo.
 
     //ENTRADA
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
 
+    let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+
+    let carrosHatch = ["308", "Focus", "i30"];
+
+    const veiculosAdd = prompt("inserir mais tres veículos!!("+ carrosSUV.join(" | ") + cassosSedan.join(" | ") + carrosHatch.join(" | ")+ ")");
+
+    const estiloDoVeiculo = prompt("inserir o tipo de veículo")
 
     //PROCESSAMENTO
 
+    let resposta;
+
+    if (estiloDoVeiculo === "sedan"){
+        resposta = cassosSedan.push(veiculosAdd);
+    }else if(estiloDoVeiculo === "hatch"){
+        resposta = carrosHatch.push(veiculosAdd);
+    }else if("carrossuv" === estiloDoVeiculo){
+        resposta = carrosSUV.push(veiculosAdd);
+    }
 
     //SAÍDA
-
+    if (estiloDoVeiculo === "sedan"){
+    document.write("carro adicionado:"+ cassosSedan.join(" | ")+ ".");
+    }else if(estiloDoVeiculo === "hatch"){
+        document.write("carro adicionado:"+ carrosHatch.join(" | ") + ".");
+    }else if("carrossuv" === estiloDoVeiculo){
+        document.write("carro adicionado:"+ carrosSUV.join(" | ") + ".");
+    }
 </script>
