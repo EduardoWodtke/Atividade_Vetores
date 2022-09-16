@@ -11,33 +11,23 @@
 
     //ENTRADA
     let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
-
-    let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
-
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
     let carrosHatch = ["308", "Focus", "i30"];
-
-    const veiculosAdd = prompt("inserir mais tres veículos!!("+ carrosSUV.join(" | ") + cassosSedan.join(" | ") + carrosHatch.join(" | ")+ ")");
-
-    const estiloDoVeiculo = prompt("inserir o tipo de veículo")
-
+    let estilos = ["1-SUV", "2-Sedan", "3-Hatch"];
+    
+    const veiculo1 = prompt("Nome do veículo a ser inserido: SUVs atuais: " + carrosSUV.join(" | ") + " Sedans atuais: " + carrosSedan.join(" | ") + " Hatches atuais: " + carrosHatch.join(" | "));
+    const estiloDoVeiculoUm = prompt("inserir o tipo de veículo: " + estilos.join(" | "));
+    const veiculo2 = prompt("Nome do veículo a ser inserido: SUVs atuais: " + carrosSUV.join(" | ") + " Sedans atuais: " + carrosSedan.join(" | ") + " Hatches atuais: " + carrosHatch.join(" | "));
+    const estiloDoVeiculoDois = prompt("inserir o tipo de veículo: " + estilos.join(" | "));
+    
     //PROCESSAMENTO
 
-    let resposta;
-
-    if (estiloDoVeiculo === "sedan"){
-        resposta = cassosSedan.push(veiculosAdd);
-    }else if(estiloDoVeiculo === "hatch"){
-        resposta = carrosHatch.push(veiculosAdd);
-    }else if("carrossuv" === estiloDoVeiculo){
-        resposta = carrosSUV.push(veiculosAdd);
-    }
+    (estiloDoVeiculoUm === 1) ? carrosSUV.push(veiculo1) : (estiloDoVeiculoUm === 2) ? carrosSedan.push(veiculo1) : carrosHatch.push(veiculo1);
+    (estiloDoVeiculoDois === 1) ? carrosSUV.push(veiculo2) : (estiloDoVeiculoDois === 2) ? carrosSedan.push(veiculo2) : carrosHatch.push(veiculo2);
+    (estiloDoVeiculoTres === 1) ? carrosSUV.push(veiculo3) : (estiloDoVeiculoTres === 2) ? carrosSedan.push(veiculo3) : carrosHatch.push(veiculo3);
 
     //SAÍDA
-    if (estiloDoVeiculo === "sedan"){
-    document.write("carro adicionado:"+ cassosSedan.join(" | ")+ ".");
-    }else if(estiloDoVeiculo === "hatch"){
-        document.write("carro adicionado:"+ carrosHatch.join(" | ") + ".");
-    }else if("carrossuv" === estiloDoVeiculo){
-        document.write("carro adicionado:"+ carrosSUV.join(" | ") + ".");
-    }
+    
+    document.write("lista nova é")
+
 </script>
