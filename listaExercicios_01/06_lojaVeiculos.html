@@ -11,14 +11,19 @@
 
     //ENTRADA
     let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let listaAntigaSUV = carrosSUV;
     let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let listaAntigaSedan = carrosSedan;
     let carrosHatch = ["308", "Focus", "i30"];
+    let listaAntigaHatch = carrosHatch;
     let estilos = ["1-SUV", "2-Sedan", "3-Hatch"];
     
     const veiculo1 = prompt("Nome do veículo a ser inserido: SUVs atuais: " + carrosSUV.join(" | ") + " Sedans atuais: " + carrosSedan.join(" | ") + " Hatches atuais: " + carrosHatch.join(" | "));
     const estiloDoVeiculoUm = prompt("inserir o tipo de veículo: " + estilos.join(" | "));
     const veiculo2 = prompt("Nome do veículo a ser inserido: SUVs atuais: " + carrosSUV.join(" | ") + " Sedans atuais: " + carrosSedan.join(" | ") + " Hatches atuais: " + carrosHatch.join(" | "));
     const estiloDoVeiculoDois = prompt("inserir o tipo de veículo: " + estilos.join(" | "));
+    const veiculo3 = prompt("Nome do veículo a ser inserido: SUVs atuais: " + carrosSUV.join(" | ") + " Sedans atuais: " + carrosSedan.join(" | ") + " Hatches atuais: " + carrosHatch.join(" | "));
+    const estiloDoVeiculoTres = prompt("inserir o tipo de veículo: " + estilos.join(" | "));
     
     //PROCESSAMENTO
 
@@ -28,6 +33,6 @@
 
     //SAÍDA
     
-    document.write("lista nova é")
+    document.write("lista nova é "+ carrosSUV.join(" | ") + carrosHatch.join(" | ") + carrosSedan.join(" | ") + ".</br>" + " a lista antiga é " +  listaAntigaSUV.join(" | ") + listaAntigaHatch.join(" | ") + listaAntigaSedan.join(" | ") + ".")
 
 </script>
