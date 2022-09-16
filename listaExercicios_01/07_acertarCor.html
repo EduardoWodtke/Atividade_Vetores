@@ -11,13 +11,21 @@
 
     //ENTRADA
 
+    const nomeCores = ["azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza"];
+    const corNumeral = prompt("informe uma cor:" + nomeCores.join(" | ") + ".");
+    let cor;
+    let resposta;
 
     //PROCESSAMENTO
-
-
+    const corSelecionada = nomeCores.indexOf("corSelecionada")
+    const corAleatoria = Math.floor(Math.random() * 7)
+    cor = nomeCores[corAleatoria]
+    (cor === corSelecionada) ? resposta = "Parabens voce acertou a cor!!! a cor era " + corSelecionada.join() + " e era " + cor.join() + "." 
+    : resposta = "Você errou... tente de novo! a cor era "+ cor.join(" ") + " você falou " + corSelecionada.join(" ") + ".";  
+    
     //SAÍDA
 
-
+    document.write(`${resposta}`)
 
     /*
     Para gerar números aleatórios, há a função random, da biblioteca Math. Nesse caso, o comando deverá ser o Math.random().
