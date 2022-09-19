@@ -11,30 +11,43 @@
 
     //ENTRADA
 
-    const nomeCores = ["azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza"];
-    const corNumeral = prompt("informe uma cor:" + nomeCores.join(" | ") + ".");
-    let cor;
+    const nomeCores = [
+        "azul",
+        "amarelo",
+        "verde",
+        "branco",
+        "preto",
+        "marrom",
+        "cinza",
+    ];
+    const corNumeral = prompt("informe uma cor:" + nomeCores.join(" | ") + ".")
+        .trim()
+        .toLowerCase();
     let resposta;
 
     //PROCESSAMENTO
-    const corSelecionada = nomeCores.indexOf("corSelecionada")
-    const corAleatoria = Math.floor(Math.random() * 7)
-    cor = nomeCores[corAleatoria]
-    (cor === corSelecionada) ? resposta = "Parabens voce acertou a cor!!! a cor era " + corSelecionada.join() + " e era " + cor.join() + "." 
-    : resposta = "Você errou... tente de novo! a cor era "+ cor.join(" ") + " você falou " + corSelecionada.join(" ") + ".";  
-    
-    //SAÍDA
 
-    document.write(`${resposta}`)
+    const corSelecionada = nomeCores.indexOf(corNumeral);
+    if (corSelecionada >= 0) {
+    const corAleatoria = Math.floor(Math.random() * 7);
+        if (corAleatoria === corSelecionada) {
+        document.write("Parabens voce acertou a cor!!! a cor que você escolheu " + corSelecionada + " e era " + corAleatoria + "");
+        } else {
+        document.write("Você errou... tente de novo! a cor era " + corAleatoria + " você falou " + corSelecionada + ".");
+        }
+    }else {
+    document.write("invalido tente essas cores" + nomeCores.join(" | ") + ".");
+    }
+  //SAÍDA
 
     /*
-    Para gerar números aleatórios, há a função random, da biblioteca Math. Nesse caso, o comando deverá ser o Math.random().
-    Contudo, o Math.random() irá gerar um número aleatório no intervalo entre 0 e 1, por exemplo, 0.678234283472.
-    Para chegarmos no intervalo que queremos, devemos multiplicar o número randômico por 7 e também usar a função Math.floor() para arredondar para baixo.
-    Execute várias vezes os comandos acima e diferentes combinações para entender a lógica da geração de números randômicos.
-
-    Para o problema em questão, utilizar-se-á a junção das seguintes funções e operações:
-    Math.floor(Math.random() * 7);
-    Entretanto, não faça uma cópia e cola apenas. Execute os comandos acima para compreender a lógica.
-    */
+      Para gerar números aleatórios, há a função random, da biblioteca Math. Nesse caso, o comando deverá ser o Math.random().
+      Contudo, o Math.random() irá gerar um número aleatório no intervalo entre 0 e 1, por exemplo, 0.678234283472.
+      Para chegarmos no intervalo que queremos, devemos multiplicar o número randômico por 7 e também usar a função Math.floor() para arredondar para baixo.
+      Execute várias vezes os comandos acima e diferentes combinações para entender a lógica da geração de números randômicos.
+  
+      Para o problema em questão, utilizar-se-á a junção das seguintes funções e operações:
+      Math.floor(Math.random() * 7);
+      Entretanto, não faça uma cópia e cola apenas. Execute os comandos acima para compreender a lógica.
+      */
 </script>
